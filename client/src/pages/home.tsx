@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Download, Mail, Github, Linkedin, ExternalLink } from "lucide-react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { Download, Mail, Github, Linkedin, ExternalLink, Code2, Trophy, Users, Star, ArrowRight, Play, Palette, Database, Globe, Smartphone } from "lucide-react";
 import { Navigation } from "@/components/navigation";
 import { Particles } from "@/components/particles";
+import { InteractiveBackground } from "@/components/interactive-background";
+import { ScrollProgress } from "@/components/scroll-progress";
+import { FloatingElements } from "@/components/floating-elements";
 import { Typewriter } from "@/components/typewriter";
 import { Timeline } from "@/components/timeline";
 import { SkillsSection } from "@/components/skills-section";
 import { ProjectCard } from "@/components/project-card";
+import { Testimonials } from "@/components/testimonials";
+import { Services } from "@/components/services";
+import { Achievements } from "@/components/achievements";
+import { TechStack } from "@/components/tech-stack";
+import { ContactForm } from "@/components/contact-form";
+import { BlogPreview } from "@/components/blog-preview";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -82,6 +91,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <ScrollProgress />
+      <InteractiveBackground />
+      <FloatingElements />
       <Particles />
       <Navigation />
 
@@ -245,8 +257,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Services Section */}
       <section className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            My <span className="text-blue-500">Services</span>
+          </motion.h2>
+          
+          <Services />
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -258,6 +286,22 @@ export default function Home() {
           </motion.h2>
           
           <SkillsSection />
+        </div>
+      </section>
+
+      {/* Tech Stack Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Technology <span className="text-purple-500">Stack</span>
+          </motion.h2>
+          
+          <TechStack />
         </div>
       </section>
 
@@ -274,6 +318,22 @@ export default function Home() {
           </motion.h2>
           
           <Timeline />
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            My <span className="text-blue-500">Achievements</span>
+          </motion.h2>
+          
+          <Achievements />
         </div>
       </section>
 
@@ -323,66 +383,129 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold mb-8"
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Client <span className="text-purple-500">Testimonials</span>
+          </motion.h2>
+          
+          <Testimonials />
+        </div>
+      </section>
+
+      {/* Blog Preview Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Latest <span className="text-green-500">Articles</span>
+          </motion.h2>
+          
+          <BlogPreview />
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mt-12"
+          >
+            <Button
+              variant="outline"
+              className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-8 py-3"
+            >
+              View All Articles
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Let's <span className="text-blue-500">Connect</span>
           </motion.h2>
           
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
-          >
-            I'm always interested in hearing about new opportunities and exciting projects. 
-            Let's discuss how we can work together!
-          </motion.p>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {[
-              { icon: Mail, title: "Email", value: "alex.morgan@email.com", color: "blue" },
-              { icon: Linkedin, title: "LinkedIn", value: "in/alex-morgan-dev", color: "pink" },
-              { icon: Github, title: "GitHub", value: "github.com/alexmorgan", color: "purple" }
-            ].map(({ icon: Icon, title, value, color }, index) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 50 }}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <div>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="glass-morphism p-6 rounded-xl cursor-pointer"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-xl text-gray-300 mb-8"
               >
-                <div className={`text-3xl mb-4 ${
-                  color === 'blue' ? 'text-blue-500' :
-                  color === 'pink' ? 'text-pink-500' : 'text-purple-500'
-                }`}>
-                  <Icon />
+                I'm always interested in hearing about new opportunities and exciting projects. 
+                Let's discuss how we can work together!
+              </motion.p>
+              
+              <div className="space-y-6 mb-8">
+                {[
+                  { icon: Mail, title: "Email", value: "alex.morgan@email.com", color: "blue", href: "mailto:alex.morgan@email.com" },
+                  { icon: Linkedin, title: "LinkedIn", value: "in/alex-morgan-dev", color: "pink", href: "https://linkedin.com/in/alex-morgan-dev" },
+                  { icon: Github, title: "GitHub", value: "github.com/alexmorgan", color: "purple", href: "https://github.com/alexmorgan" }
+                ].map(({ icon: Icon, title, value, color, href }, index) => (
+                  <motion.a
+                    key={title}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ scale: 1.02, x: 10 }}
+                    className="flex items-center p-4 glass-morphism rounded-xl cursor-pointer group"
+                  >
+                    <div className={`text-2xl mr-4 ${
+                      color === 'blue' ? 'text-blue-500' :
+                      color === 'pink' ? 'text-pink-500' : 'text-purple-500'
+                    } group-hover:scale-110 transition-transform duration-200`}>
+                      <Icon />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{title}</h3>
+                      <p className="text-gray-400 text-sm">{value}</p>
+                    </div>
+                    <ArrowRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  </motion.a>
+                ))}
+              </div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="glass-morphism p-6 rounded-xl"
+              >
+                <h4 className="font-semibold mb-3">Quick Response Time</h4>
+                <p className="text-gray-400 text-sm mb-3">I typically respond to messages within 24 hours.</p>
+                <div className="flex items-center text-green-400 text-sm">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
+                  Available for new projects
                 </div>
-                <h3 className="font-semibold mb-2">{title}</h3>
-                <p className="text-gray-400 text-sm">{value}</p>
               </motion.div>
-            ))}
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <ContactForm />
+            </div>
           </div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <Button
-              onClick={() => window.open('mailto:alex.morgan@email.com')}
-              className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-12 py-4 text-lg hover:scale-105 transition-transform duration-300 neon-glow"
-            >
-              Get In Touch
-            </Button>
-          </motion.div>
         </div>
       </section>
 
