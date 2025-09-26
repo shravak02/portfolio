@@ -19,23 +19,24 @@ import { BlogPreview } from "@/components/blog-preview";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
+
 const projectsData = [
   {
     title: "E-Commerce Platform",
     description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory management and analytics dashboard.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/shravak02/EcommercE",
+    liveUrl: "https://ecommerc-e.vercel.app/",
     color: "blue" as const
   },
   {
-    title: "Task Management App", 
+    title: "Travel Dashboard",
     description: "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Vue.js", "Express", "Socket.io", "PostgreSQL"],
-    githubUrl: "#",
-    liveUrl: "#", 
+    technologies: ["React.js", "React-Router-v7", "Tailwind CSS", "TypeScript"],
+    githubUrl: "https://github.com/shravak02/travel-dashboard",
+    liveUrl: "https://travel-dashboard-rosy.vercel.app/", 
     color: "pink" as const
   },
   {
@@ -63,7 +64,7 @@ export default function Home() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'Alex_Morgan_Resume.pdf';
+      a.download = 'Shravak_Morgan_Resume.pdf';
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -109,7 +110,7 @@ export default function Home() {
             <Typewriter
               texts={[
                 "Hi",
-                "Hi, I'm Alex Morgan", 
+                "Hi, I'm Shravak Zombade", 
                 "I am a Full Stack Developer"
               ]}
               className="text-4xl md:text-6xl lg:text-7xl font-bold"
@@ -181,7 +182,7 @@ export default function Home() {
             About <span className="text-blue-500">Me</span>
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center px-5">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -189,7 +190,7 @@ export default function Home() {
               className="space-y-6"
             >
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience building 
+                I'm a passionate full-stack developer with over 1 year of experience building 
                 web applications that solve real-world problems. My journey started with curiosity 
                 about how websites work, and it evolved into a deep love for creating digital experiences 
                 that users genuinely enjoy.
@@ -209,7 +210,7 @@ export default function Home() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-3xl font-bold text-blue-500"
                   >
-                    50+
+                    10+
                   </motion.div>
                   <div className="text-gray-400">Projects Completed</div>
                 </div>
@@ -220,7 +221,7 @@ export default function Home() {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-3xl font-bold text-pink-500"
                   >
-                    5+
+                    1+
                   </motion.div>
                   <div className="text-gray-400">Years Experience</div>
                 </div>
@@ -235,7 +236,7 @@ export default function Home() {
             >
               <div className="w-full h-96 bg-gray-800 rounded-2xl overflow-hidden neon-glow">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000" 
+                  src="/image.png" 
                   alt="Professional headshot" 
                   className="w-full h-full object-cover"
                 />
@@ -322,7 +323,7 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -335,7 +336,7 @@ export default function Home() {
           
           <Achievements />
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Projects */}
       <section id="projects" className="py-20 bg-gray-900/50">
@@ -384,7 +385,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -397,10 +398,10 @@ export default function Home() {
           
           <Testimonials />
         </div>
-      </section>
+      </section> */}
 
       {/* Blog Preview Section */}
-      <section className="py-20 bg-gray-900/50">
+      {/* <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -427,7 +428,7 @@ export default function Home() {
             </Button>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-900/50">
@@ -456,9 +457,9 @@ export default function Home() {
               
               <div className="space-y-6 mb-8">
                 {[
-                  { icon: Mail, title: "Email", value: "alex.morgan@email.com", color: "blue", href: "mailto:alex.morgan@email.com" },
-                  { icon: Linkedin, title: "LinkedIn", value: "in/alex-morgan-dev", color: "pink", href: "https://linkedin.com/in/alex-morgan-dev" },
-                  { icon: Github, title: "GitHub", value: "github.com/alexmorgan", color: "purple", href: "https://github.com/alexmorgan" }
+                  { icon: Mail, title: "Email", value: "Shravakzombade38@gmail.com", color: "blue", href: "mailto:Shravakzombade38@gmail.com" },
+                  { icon: Linkedin, title: "LinkedIn", value: "in/Shravak-Zombade", color: "pink", href: "https://www.linkedin.com/in/shravak-zombade-9a4a38283/" },
+                  { icon: Github, title: "GitHub", value: "github.com/shravak02", color: "purple", href: "https://github.com/shravak02" }
                 ].map(({ icon: Icon, title, value, color, href }, index) => (
                   <motion.a
                     key={title}
@@ -513,7 +514,7 @@ export default function Home() {
       <footer className="py-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-gray-400">
-            &copy; 2024 Alex Morgan. Built with passion and lots of coffee ☕
+            &copy; 2024 Shravak Zombade. Built with passion and lots of coffee ☕
           </p>
         </div>
       </footer>

@@ -105,7 +105,7 @@ export function Navigation() {
                 className={`block w-full text-left py-2 transition-colors duration-300 ${
                   activeSection === item.href.substring(1)
                     ? "text-blue-500"
-                    : "text-white hover:text-blue-500"
+                    : "text-white hover:text-blue-500" 
                 }`}
               >
                 {item.label}

@@ -30,18 +30,18 @@ const skillsData: SkillCategory[] = [
     icon: <Server className="text-2xl" />,
     color: "pink",
     skills: [
-      { name: "Node.js", level: 92 },
+      { name: "Node.js", level: 92 },/* 
       { name: "Python", level: 85 },
-      { name: "PostgreSQL", level: 80 }
+      { name: "PostgreSQL", level: 80 } */
     ]
   },
   {
     title: "Tools & Others",
     icon: <Wrench className="text-2xl" />,
     color: "purple", 
-    skills: [
+    skills: [/* 
       { name: "Docker", level: 87 },
-      { name: "AWS", level: 83 },
+      { name: "AWS", level: 83 }, */
       { name: "Git", level: 95 }
     ]
   }

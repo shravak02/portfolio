@@ -11,26 +11,26 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
-    period: "2022 - Present",
-    description: "Leading development of enterprise web applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices.",
+    title: "B.Tech in Computer Science",
+    company: "IIIT Kottayam",
+    period: "2020 - 2024",
+    description: "Graduated with no backlogs. Relevant coursework: Data Structures, Algorithms, Web Development, Database Management, AI/ML.",
     color: "blue"
   },
   {
     title: "Full Stack Developer",
-    company: "StartupXYZ",
-    period: "2020 - 2022", 
-    description: "Built scalable web applications from scratch. Worked with React, Python Django, and PostgreSQL. Increased application performance by 40%.",
+    company: "Freelancer",
+    period: "2023 - present", 
+    description: "Built scalable web applications from scratch. Worked with React, Increased application performance by 40%.",
     color: "pink"
   },
-  {
+  /* {
     title: "Frontend Developer",
     company: "DigitalAgency",
     period: "2019 - 2020",
     description: "Developed responsive websites and web applications for various clients. Specialized in React.js and modern CSS frameworks.",
     color: "purple"
-  }
+  } */
 ];
 
 const colorClasses = {

@@ -17,21 +17,22 @@ const technologies: Technology[] = [
   
   // Backend
   { name: "Node.js", icon: "🟢", category: "backend", level: 92 },
-  { name: "Express", icon: "🚄", category: "backend", level: 90 },
+  { name: "Express", icon: "🚄", category: "backend", level: 90 },/* 
   { name: "Python", icon: "🐍", category: "backend", level: 85 },
   { name: "GraphQL", icon: "🔗", category: "backend", level: 80 },
-  
+   */
   // Database
-  { name: "PostgreSQL", icon: "🐘", category: "database", level: 88 },
-  { name: "MongoDB", icon: "🍃", category: "database", level: 85 },
+  { name: "Firebase", icon: "🐘", category: "database", level: 88 },
+  { name: "MongoDB", icon: "🍃", category: "database", level: 85 },/* 
   { name: "Redis", icon: "🔴", category: "database", level: 75 },
-  { name: "Prisma", icon: "💎", category: "database", level: 82 },
+  { name: "Prisma", icon: "💎", category: "database", level: 82 }, */
   
   // Tools
+   /* 
   { name: "AWS", icon: "☁️", category: "tools", level: 85 },
-  { name: "Docker", icon: "🐳", category: "tools", level: 88 },
-  { name: "Git", icon: "📝", category: "tools", level: 95 },
-  { name: "Figma", icon: "🎯", category: "tools", level: 80 }
+  { name: "Docker", icon: "🐳", category: "tools", level: 88 }, */
+  { name: "Git", icon: "📝", category: "tools", level: 95 },/* 
+  { name: "Figma", icon: "🎯", category: "tools", level: 80 } */
 ];
 
 const categoryColors = {
