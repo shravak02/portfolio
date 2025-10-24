@@ -40,12 +40,12 @@ const projectsData = [
     color: "pink" as const
   },
   {
-    title: "Weather Analytics",
-    description: "Advanced weather tracking application with interactive maps, historical data analysis, and predictive modeling using machine learning.",
+    title: "Ecomm",
+    description: "Modern ecomm application with AI-driven product recommendations, interactive data visualizations, and seamless user experience.",
     image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     technologies: ["Python", "Django", "D3.js", "TensorFlow"],
     githubUrl: "#",
-    liveUrl: "#",
+    liveUrl: "https://ecom-nu-seven-41.vercel.app/",
     color: "purple" as const
   }
 ];
